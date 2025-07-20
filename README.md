@@ -112,7 +112,7 @@ Open it in your browser.
 
 ## 📄 License
 
-This project is licensed under your chosen license. *(Update this section if needed)*
+This project is Own By Hannahlene
 
 ---
 
