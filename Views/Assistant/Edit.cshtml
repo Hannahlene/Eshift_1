@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EShift.Models.Assistant
+@{
+    ViewData["Title"] = "Edit Assistant";
+}
+
+<style>
+    /* Modern styling for edit form */
+    .container {
+        background-color: #f8f9fa; /* Light gray */
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+        max-width: 600px;
+    }
+
+    h1 {
+        color: #d97706; /* Amber-600 from Tailwind */
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    label.form-label {
+        font-weight: 600;
+        color: #374151; /* Gray-700 */
+    }
+
+    input.form-control {
+        border-radius: 8px;
+        border: 1.5px solid #cbd5e1; /* Gray-300 */
+        padding: 0.5rem 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    input.form-control:focus {
+        border-color: #d97706; /* Amber-600 */
+        box-shadow: 0 0 0 0.25rem rgb(217 119 6 / 0.25);
+    }
+
+    .btn-warning {
+        background-color: #d97706;
+        border-color: #d97706;
+        box-shadow: 0 4px 12px rgb(217 119 6 / 0.4);
+        font-weight: 600;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-warning:hover {
+        background-color: #b45309;
+        border-color: #b45309;
+        box-shadow: 0 6px 16px rgb(180 83 9 / 0.6);
+    }
+
+    .btn-secondary {
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    .btn-secondary:hover {
+        background-color: #6b7280; /* Gray-600 */
+        border-color: #6b7280;
+        color: white;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem !important;
+    }
+</style>
+
+<div class="container mx-auto">
+    <h1 class="text-center mb-4">Edit Assistant</h1>
+
+    <div>
+        <form asp-action="Edit" method="post" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+            <input type="hidden" asp-for="AssistantId" />
+
+            <div class="mb-4">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Phone" class="form-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger small"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning shadow-sm">Save Changes</button>
+                <a asp-action="Index" class="btn btn-secondary shadow-sm">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

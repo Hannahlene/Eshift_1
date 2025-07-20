@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<EShift.Models.Customer>
+
+@{
+    ViewData["Title"] = "Customer List";
+}
+
+<style>
+    .page-container {
+        background-color: #f9fafb;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgb(0 0 0 / 0.05);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #0d3b66;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .table {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(13, 59, 102, 0.1);
+    }
+
+    .table thead {
+        background-color: #0d3b66;
+        color: white;
+        font-weight: 600;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #e6f0fa;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #c1d3f2;
+    }
+
+    td, th {
+        text-align: center;
+        vertical-align: middle;
+        padding: 1rem 1.25rem;
+    }
+
+    /* Action buttons */
+    .btn-sm {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.85rem;
+        margin: 0 2px;
+    }
+
+    .btn-info {
+        background-color: #3a86ff;
+        border-color: #3a86ff;
+        color: white;
+    }
+
+    .btn-info:hover {
+        background-color: #265dcc;
+        border-color: #265dcc;
+    }
+
+    .btn-danger {
+        background-color: #e63946;
+        border-color: #e63946;
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background-color: #b22234;
+        border-color: #b22234;
+    }
+</style>
+
+<div class="page-container">
+    <h1>Customers List</h1>
+
+    @* Optionally add Create button in the future *@
+    @* <p class="text-center mb-4">
+        <a asp-action="Create" class="btn btn-success rounded-2 shadow-sm px-4">
+            Create New Customer
+        </a>
+    </p> *@
+
+    <div class="table-responsive rounded-3 shadow-sm border">
+        <table class="table table-striped table-hover mb-0">
+            <thead>
+                <tr>
+                    <th scope="col">@Html.DisplayNameFor(model => model.First().Email)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.First().Phone)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.First().Address)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.First().CreatedAt)</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                        <td>@item.CreatedAt.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            @* <a asp-action="Edit" asp-route-id="@item.CustomerId" class="btn btn-sm btn-primary">Edit</a> | *@
+                            <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

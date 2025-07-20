@@ -1,0 +1,122 @@
+﻿@model EShift.Models.LoginViewModel
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+            <div class="card shadow-sm rounded-4 border-0">
+                <div class="card-body p-5">
+                    <h2 class="mb-4 text-primary fw-bold text-center">Welcome Back</h2>
+                    <p class="text-center text-muted mb-4">
+                        Please sign in to access your EShift account and manage your shipments effortlessly.
+                    </p>
+
+                    <form asp-action="Login" asp-controller="Account" method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div asp-validation-summary="All" class="alert alert-danger rounded-3"></div>
+                        }
+
+                        <div class="mb-4">
+                            <label asp-for="Email" class="form-label text-primary fw-semibold">Email Address</label>
+                            <input asp-for="Email" type="email" class="form-control border-primary rounded-pill shadow-sm" placeholder="you@example.com" required />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4 position-relative">
+                            <label asp-for="Password" class="form-label text-primary fw-semibold">Password</label>
+                            <input asp-for="Password" type="password" class="form-control border-primary rounded-pill shadow-sm" id="passwordInputLogin" placeholder="Enter your password" required />
+                                <i class="bi bi-eye" id="toggleIconLogin"></i>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input asp-for="RememberMe" class="form-check-input" id="rememberMeCheck" />
+                            <label asp-for="RememberMe" class="form-check-label text-secondary fw-semibold" for="rememberMeCheck">
+                                Keep me signed in
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow-sm fs-5">
+                            Sign In
+                        </button>
+                    </form>
+
+                    <div class="mt-4 text-center">
+                        <small class="text-muted">
+                            Don’t have an account? 
+                            <a asp-controller="Account" asp-action="Register" class="text-primary fw-semibold text-decoration-none">Create one here</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: #f0f5ff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.3rem rgba(37, 99, 235, 0.4);
+        border-color: #2563eb;
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #1e40af;
+        border-color: #1e40af;
+        box-shadow: 0 0 10px rgba(30, 64, 175, 0.5);
+    }
+
+    #passwordInputLogin {
+        padding-right: 3rem;
+    }
+
+    #togglePasswordLogin {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #togglePasswordLogin:hover {
+        background-color: #2563eb;
+        color: white;
+    }
+</style>
+
+<script>
+    const togglePasswordLogin = document.getElementById('togglePasswordLogin');
+    const passwordInputLogin = document.getElementById('passwordInputLogin');
+    const toggleIconLogin = document.getElementById('toggleIconLogin');
+
+    if (togglePasswordLogin && passwordInputLogin && toggleIconLogin) {
+        togglePasswordLogin.addEventListener('click', () => {
+            const type = passwordInputLogin.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInputLogin.setAttribute('type', type);
+
+            toggleIconLogin.classList.toggle('bi-eye');
+            toggleIconLogin.classList.toggle('bi-eye-slash');
+        });
+    }
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

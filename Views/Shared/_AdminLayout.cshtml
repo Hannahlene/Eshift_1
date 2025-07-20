@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"] ?? "Dashboard";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - E-Shift Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 70px; /* space for fixed navbar */
+            background-color: #f8f9fa;
+        }
+        footer {
+            border-top: 1px solid #dee2e6;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="/Admin/Dashboard">
+                <img src="/images/logo.png" alt="E-Shift Logo" style="height: 35px; margin-right: 10px;" />
+                <span>E-Shift Admin</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("Admin", "Dashboard"))" href="/Admin/Dashboard">
+                            <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("Job"))" href="/Job">
+                            <i class="fas fa-tasks me-1"></i> Jobs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("User"))" href="/User">
+                            <i class="fas fa-users me-1"></i> Customers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("Lorry"))" href="/Lorry">
+                            <i class="fas fa-truck me-1"></i> Lorries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("Driver"))" href="/Driver">
+                            <i class="fas fa-user me-1"></i> Drivers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(IsActive("Assistant"))" href="/Assistant">
+                            <i class="fas fa-user-tie me-1"></i> Assistants
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle @(IsActive("Container") + IsActive("TransportUnit") + IsActive("Load") + IsActive("Product"))" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-boxes-stacked me-1"></i> Inventory
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item @(IsActive("Container"))" href="/Container">Containers</a></li>
+                            <li><a class="dropdown-item @(IsActive("TransportUnit"))" href="/TransportUnit">Transport Units</a></li>
+                            <li><a class="dropdown-item @(IsActive("Load"))" href="/Load">Loads</a></li>
+                            <li><a class="dropdown-item @(IsActive("Product"))" href="/Product">Products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form asp-controller="Account" asp-action="Logout" method="post" class="d-flex">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <i class="fas fa-sign-out-alt me-1"></i> Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        @RenderBody()
+    </main>
+
+    <footer>
+        &copy; @DateTime.Now.Year E-Shift Management System. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @functions {
+        public string IsActive(string controller, string? action = null)
+        {
+            var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+            var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+            if (controller == currentController && (action == null || action == currentAction))
+            {
+                return "active";
+            }
+            return "";
+        }
+    }
+</body>
+</html>

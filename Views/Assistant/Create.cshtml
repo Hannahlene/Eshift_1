@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EShift.Models.Assistant
+@{
+    ViewData["Title"] = "Create Assistant";
+}
+
+<style>
+    .container {
+        max-width: 720px;
+        background-color: #f9fafb;
+        border-radius: 16px;
+        padding: 40px 32px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    h1 {
+        color: #2563eb; /* Blue-600 */
+        font-weight: 700;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 1rem;
+        border: 1px solid #d1d5db;
+    }
+
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-success {
+        background-color: #10b981;
+        border-color: #10b981;
+        font-weight: 600;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-success:hover {
+        background-color: #059669;
+        border-color: #059669;
+    }
+
+    .btn-secondary {
+        background-color: #6b7280;
+        border-color: #6b7280;
+        font-weight: 600;
+        border-radius: 8px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #4b5563;
+        border-color: #4b5563;
+    }
+
+    .alert-danger {
+        border-radius: 8px;
+    }
+
+    .text-danger {
+        font-size: 0.875rem;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Create New Assistant</h1>
+
+    <form asp-action="Create" method="post" asp-antiforgery="true">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+        <div class="mb-4">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Phone" class="form-label"></label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success shadow-sm">Create Assistant</button>
+            <a asp-action="Index" class="btn btn-secondary shadow-sm">Back to List</a>
+        </div>
+    </form>
+</div>

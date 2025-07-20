@@ -1,0 +1,233 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "About Us";
+}
+
+<style>
+    /* Modern About Us Styling */
+    .hero-about {
+        background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+        color: white;
+        padding: 5rem 1rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        margin-bottom: 3rem;
+    }
+    .hero-about h1 {
+        font-weight: 700;
+        font-size: 3.5rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 0.5rem;
+    }
+    .hero-about p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        opacity: 0.9;
+    }
+
+    .about-section {
+        background-color: #F3F4F6; /* Light gray */
+        border-radius: 0.5rem;
+        padding: 2.5rem 2rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 3px 10px rgb(156 163 175 / 0.2);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-section h2 {
+        color: #1E40AF; /* Dark Blue */
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .about-section h2 i {
+        color: #3B82F6; /* Accent Blue */
+        font-size: 1.8rem;
+    }
+    .about-section p.lead {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #374151;
+        font-weight: 500;
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .values-list {
+        list-style: none;
+        padding-left: 0;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .values-list li {
+        background: white;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgb(156 163 175 / 0.15);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: transform 0.3s ease;
+    }
+    .values-list li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgb(37 99 235 / 0.3);
+    }
+    .values-list i {
+        font-size: 2rem;
+        color: #2563EB;
+        min-width: 40px;
+    }
+    .values-list h4 {
+        margin-bottom: 0.3rem;
+        color: #1E40AF;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    .values-list p {
+        margin: 0;
+        color: #4B5563;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .team-member {
+        background: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 4px 15px rgb(59 130 246 / 0.2);
+        transition: transform 0.3s ease;
+        cursor: default;
+    }
+    .team-member:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 8px 25px rgb(37 99 235 / 0.4);
+    }
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        border: 3px solid #2563EB;
+    }
+    .team-member h5 {
+        color: #1E40AF;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+    .team-member p {
+        color: #4B5563;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+</style>
+
+<div class="hero-about">
+    <div class="container">
+        <h1>About EShift</h1>
+        <p>Your Trusted Partner for Seamless & Efficient Household Goods Transportation</p>
+    </div>
+</div>
+
+<div class="container">
+    <section class="about-section">
+        <h2><i class="bi bi-rocket-takeoff-fill"></i> Our Mission</h2>
+        <p class="lead">
+            At EShift, our mission is to transform the household goods transport industry by delivering reliable, innovative, and user-friendly logistics solutions. We connect customers with a trusted network of professional transport units, ensuring every shipment is handled safely, efficiently, and with complete transparency.
+        </p>
+    </section>
+
+    <section class="about-section">
+        <h2><i class="bi bi-eye-fill"></i> Our Vision</h2>
+        <p class="lead">
+            To become the most trusted digital platform for household goods transport, setting the industry standard for innovation, customer experience, and sustainable logistics practices.
+        </p>
+    </section>
+
+    <section class="about-section">
+        <h2><i class="bi bi-people-fill"></i> Who We Are</h2>
+        <p class="lead">
+            EShift is a dedicated team of logistics and technology professionals committed to making moving household goods simple and stress-free. Our platform offers detailed shipment management, real-time tracking, and a seamless communication experience between customers and transport units.
+        </p>
+        <div class="text-center mt-4">
+            <img src="/images/team-collaboration.jpg" alt="Team Collaboration" class="img-fluid rounded shadow-sm" style="max-width: 600px;">
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2><i class="bi bi-star-fill"></i> Our Core Values</h2>
+        <ul class="values-list">
+            <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                    <h4>Dependability</h4>
+                    <p>We consistently deliver on our promises with reliable service and transparent communication.</p>
+                </div>
+            </li>
+            <li>
+                <i class="bi bi-lightbulb-fill"></i>
+                <div>
+                    <h4>Innovation</h4>
+                    <p>We embrace technology and continuously improve to provide the best logistics solutions.</p>
+                </div>
+            </li>
+            <li>
+                <i class="bi bi-graph-up-arrow"></i>
+                <div>
+                    <h4>Transparency</h4>
+                    <p>Clear, honest communication is at the core of our customer relationships.</p>
+                </div>
+            </li>
+            <li>
+                <i class="bi bi-heart-fill"></i>
+                <div>
+                    <h4>Customer Centricity</h4>
+                    <p>Your satisfaction drives every decision we make.</p>
+                </div>
+            </li>
+            <li>
+                <i class="bi bi-leaf-fill"></i>
+                <div>
+                    <h4>Sustainability</h4>
+                    <p>We strive for eco-friendly practices in all aspects of our logistics operations.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="about-section">
+        <h2><i class="bi bi-person-bounding-box"></i> Meet Our Team</h2>
+        <div class="row text-center justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="team-member">
+                    <img src="/images/team/member1.jpg" alt="John Doe">
+                    <h5>John Doe</h5>
+                    <p>CEO & Founder</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="team-member">
+                    <img src="/images/team/member2.jpg" alt="Jane Smith">
+                    <h5>Jane Smith</h5>
+                    <p>Chief Operating Officer</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="team-member">
+                    <img src="/images/team/member3.jpg" alt="Michael Brown">
+                    <h5>Michael Brown</h5>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

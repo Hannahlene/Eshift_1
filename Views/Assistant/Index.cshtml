@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<EShift.Models.Assistant>
+@{
+    ViewData["Title"] = "Assistants";
+}
+
+<style>
+    /* Modern color pattern and styling */
+    .container {
+        background-color: #f8f9fa; /* Light gray background */
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    }
+
+    h1 {
+        color: #212529; /* Darker text */
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    table thead {
+        background-color: #e9ecef; /* Light header background */
+    }
+
+    table thead th {
+        color: #495057;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    .btn-sm {
+        min-width: 80px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4f46e5;
+        border-color: #4f46e5;
+        box-shadow: 0 4px 12px rgb(79 70 229 / 0.4);
+    }
+    .btn-primary:hover {
+        background-color: #4338ca;
+        border-color: #4338ca;
+        box-shadow: 0 6px 16px rgb(67 56 202 / 0.6);
+    }
+
+    .btn-info {
+        background-color: #0ea5e9;
+        border-color: #0ea5e9;
+        box-shadow: 0 4px 12px rgb(14 165 233 / 0.4);
+    }
+    .btn-info:hover {
+        background-color: #0284c7;
+        border-color: #0284c7;
+        box-shadow: 0 6px 16px rgb(2 132 199 / 0.6);
+    }
+
+    .btn-danger {
+        background-color: #ef4444;
+        border-color: #ef4444;
+        box-shadow: 0 4px 12px rgb(239 68 68 / 0.4);
+    }
+    .btn-danger:hover {
+        background-color: #dc2626;
+        border-color: #dc2626;
+        box-shadow: 0 6px 16px rgb(220 38 38 / 0.6);
+    }
+
+    .btn-success {
+        background-color: #22c55e;
+        border-color: #22c55e;
+        box-shadow: 0 4px 12px rgb(34 197 94 / 0.4);
+    }
+    .btn-success:hover {
+        background-color: #16a34a;
+        border-color: #16a34a;
+        box-shadow: 0 6px 16px rgb(22 163 74 / 0.6);
+    }
+
+    a.btn-success {
+        margin-bottom: 24px;
+    }
+</style>
+
+<div class="container py-4">
+    <h1 class="text-center mb-4">Assistants</h1>
+
+    <p class="text-center">
+        <a asp-action="Create" class="btn btn-success shadow-sm">
+            Create New Assistant
+        </a>
+    </p>
+
+    <div class="table-responsive rounded-3 shadow-sm border border-light">
+        <table class="table table-striped table-hover align-middle mb-0">
+            <thead>
+                <tr>
+                    <th scope="col" class="py-3 px-3">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th scope="col" class="py-3 px-3">
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <th scope="col" class="py-3 px-3 text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-3 px-3">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td class="py-3 px-3">
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td class="py-3 px-3 text-center">
+                            <a asp-action="Edit" asp-route-id="@item.AssistantId" class="btn btn-sm btn-primary me-1">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.AssistantId" class="btn btn-sm btn-info me-1">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.AssistantId" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

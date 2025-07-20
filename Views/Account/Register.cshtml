@@ -1,0 +1,155 @@
+﻿@model EShift.Models.RegisterViewModel
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+            <div class="card shadow rounded-4 border-0">
+                <div class="card-body p-5">
+                    <h2 class="text-center text-primary fw-bold mb-4">Create Your EShift Account</h2>
+                    <p class="text-center text-muted mb-4">
+                        Join EShift today to streamline your household goods transportation with ease and confidence.
+                    </p>
+
+                    <form asp-action="Register" method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div asp-validation-summary="All" class="alert alert-danger rounded-3"></div>
+                        }
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-semibold text-primary">Full Name</label>
+                            <input asp-for="Name" class="form-control rounded-pill shadow-sm" placeholder="Your full name" required />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label fw-semibold text-primary">Email Address</label>
+                            <input asp-for="Email" type="email" class="form-control rounded-pill shadow-sm" placeholder="you@example.com" required />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Phone" class="form-label fw-semibold text-primary">Phone Number</label>
+                            <input asp-for="Phone" type="tel" class="form-control rounded-pill shadow-sm" placeholder="+1 234 567 890" required />
+                            <span asp-validation-for="Phone" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Address" class="form-label fw-semibold text-primary">Address</label>
+                            <input asp-for="Address" class="form-control rounded-pill shadow-sm" placeholder="Your full address" required />
+                            <span asp-validation-for="Address" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3 position-relative">
+                            <label asp-for="Password" class="form-label fw-semibold text-primary">Password</label>
+                            <input asp-for="Password" type="password" class="form-control rounded-pill shadow-sm" id="passwordInputRegister" placeholder="Create a password" required />
+                                <i class="bi bi-eye" id="togglePasswordIconRegister"></i>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4 position-relative">
+                            <label asp-for="ConfirmPassword" class="form-label fw-semibold text-primary">Confirm Password</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control rounded-pill shadow-sm" id="confirmPasswordInputRegister" placeholder="Confirm your password" required />
+                                <i class="bi bi-eye" id="toggleConfirmPasswordIconRegister"></i>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow-sm fs-5">
+                            Register Now
+                        </button>
+                    </form>
+
+                    <div class="mt-4 text-center">
+                        <small class="text-muted">
+                            Already have an account? 
+                            <a asp-controller="Account" asp-action="Login" class="text-primary fw-semibold text-decoration-none">Sign in here</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f7faff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.3rem rgba(37, 99, 235, 0.4);
+        border-color: #2563eb;
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #1e40af;
+        border-color: #1e40af;
+        box-shadow: 0 0 10px rgba(30, 64, 175, 0.5);
+    }
+
+    #passwordInputRegister,
+    #confirmPasswordInputRegister {
+        padding-right: 3rem;
+    }
+
+    #togglePasswordRegister,
+    #toggleConfirmPasswordRegister {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #togglePasswordRegister:hover,
+    #toggleConfirmPasswordRegister:hover {
+        background-color: #2563eb;
+        color: white;
+    }
+</style>
+
+<script>
+    const togglePasswordBtnRegister = document.getElementById('togglePasswordRegister');
+    const passwordInputRegister = document.getElementById('passwordInputRegister');
+    const togglePasswordIconRegister = document.getElementById('togglePasswordIconRegister');
+
+    if (togglePasswordBtnRegister && passwordInputRegister && togglePasswordIconRegister) {
+        togglePasswordBtnRegister.addEventListener('click', () => {
+            const type = passwordInputRegister.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInputRegister.setAttribute('type', type);
+            togglePasswordIconRegister.classList.toggle('bi-eye-slash');
+            togglePasswordIconRegister.classList.toggle('bi-eye');
+        });
+    }
+
+    const toggleConfirmPasswordBtnRegister = document.getElementById('toggleConfirmPasswordRegister');
+    const confirmPasswordInputRegister = document.getElementById('confirmPasswordInputRegister');
+    const toggleConfirmPasswordIconRegister = document.getElementById('toggleConfirmPasswordIconRegister');
+
+    if (toggleConfirmPasswordBtnRegister && confirmPasswordInputRegister && toggleConfirmPasswordIconRegister) {
+        toggleConfirmPasswordBtnRegister.addEventListener('click', () => {
+            const type = confirmPasswordInputRegister.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPasswordInputRegister.setAttribute('type', type);
+            toggleConfirmPasswordIconRegister.classList.toggle('bi-eye-slash');
+            toggleConfirmPasswordIconRegister.classList.toggle('bi-eye');
+        });
+    }
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

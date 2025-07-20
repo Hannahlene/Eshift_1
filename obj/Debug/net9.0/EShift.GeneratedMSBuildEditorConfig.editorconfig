@@ -1,0 +1,269 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EShift
+build_property.RootNamespace = EShift
+build_property.ProjectDir = /home/x-coder/Desktop/EShift/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/x-coder/Desktop/EShift
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/home/x-coder/Desktop/EShift/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Assistant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaXN0YW50L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Assistant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaXN0YW50L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Assistant/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaXN0YW50L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Assistant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaXN0YW50L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Assistant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaXN0YW50L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Container/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFpbmVyL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Container/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFpbmVyL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Container/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFpbmVyL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Container/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFpbmVyL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Container/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFpbmVyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Customer/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Customer/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Driver/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRHJpdmVyL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Driver/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRHJpdmVyL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Driver/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRHJpdmVyL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Driver/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRHJpdmVyL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Driver/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRHJpdmVyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Job/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Job/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Job/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Job/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Job/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Load/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hZC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Load/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hZC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Load/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hZC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Load/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9hZC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Lorry/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9ycnkvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Lorry/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9ycnkvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Lorry/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9ycnkvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Lorry/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9ycnkvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Lorry/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9ycnkvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyJob/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlKb2IvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyJob/RequestJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlKb2IvUmVxdWVzdEpvYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyProduct/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlQcm9kdWN0L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyProduct/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlQcm9kdWN0L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyProduct/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlQcm9kdWN0L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyProduct/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlQcm9kdWN0L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/MyProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXlQcm9kdWN0L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/TransportUnit/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0VW5pdC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/TransportUnit/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0VW5pdC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/TransportUnit/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0VW5pdC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/TransportUnit/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0VW5pdC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/TransportUnit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNwb3J0VW5pdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/x-coder/Desktop/EShift/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-be3zux4mr5

@@ -1,0 +1,154 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EShift.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<style>
+    .dashboard-container {
+        background-color: #f0f4f8;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 0 15px rgba(0, 80, 130, 0.1);
+    }
+
+    h1, h3 {
+        color: #065f73;
+    }
+
+    .dashboard-table {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(6, 95, 115, 0.15);
+    }
+
+    .dashboard-table thead {
+        background-color: #0a9396;
+        color: white;
+        font-weight: 600;
+    }
+
+    .dashboard-table tbody tr:nth-child(odd) {
+        background-color: #e0f2f1;
+    }
+
+    .dashboard-table tbody tr:hover {
+        background-color: #94d2bd;
+        color: #073b4c;
+    }
+
+    .count-total {
+        color: #005f73;
+        font-weight: 700;
+    }
+
+    .count-progress {
+        color: #0a9396;
+        font-weight: 700;
+    }
+
+    .count-completed {
+        color: #94d2bd;
+        font-weight: 700;
+    }
+
+    .count-cancelled {
+        color: #ee6c4d;
+        font-weight: 700;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="dashboard-container mx-auto col-md-8 col-lg-6">
+        <h1 class="text-center mb-4">Reports</h1>
+        <h3 class="text-center mb-4">Job Summary Report</h3>
+
+        <table class="table dashboard-table text-center mb-0">
+            <thead>
+                <tr>
+                    <th>Report Type</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Jobs</td>
+                    <td class="count-total">@Model.TotalJobs</td>
+                </tr>
+                <tr>
+                    <td>In Progress Jobs</td>
+                    <td class="count-progress">@Model.ActiveJobs</td>
+                </tr>
+                <tr>
+                    <td>Completed Jobs</td>
+                    <td class="count-completed">@Model.CompletedJobs</td>
+                </tr>
+                <tr>
+                    <td>Cancelled Jobs</td>
+                    <td class="count-cancelled">@Model.CancelledJobs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="card mt-5 shadow p-4">
+        <h4 class="text-center text-primary mb-4">Job Status Overview</h4>
+        <canvas id="jobChart" width="400" height="200"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('jobChart').getContext('2d');
+
+        const jobChart = new Chart(ctx, {
+            type: 'bar', // Change to 'pie' or 'doughnut' if preferred
+            data: {
+                labels: ['Total', 'In Progress', 'Completed', 'Cancelled'],
+                datasets: [{
+                    label: 'Jobs',
+                    data: [
+                        @Model.TotalJobs,
+                        @Model.ActiveJobs,
+                        @Model.CompletedJobs,
+                        @Model.CancelledJobs
+                    ],
+                    backgroundColor: [
+                        '#005f73',
+                        '#0a9396',
+                        '#94d2bd',
+                        '#ee6c4d'
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Jobs Summary Chart'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

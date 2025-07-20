@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EShift.Models.Lorry
+@{
+    ViewData["Title"] = "Edit Lorry";
+}
+
+<style>
+    .edit-container {
+        max-width: 600px;
+        margin: 2.5rem auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        padding: 2.5rem 3rem;
+    }
+
+    h1 {
+        color: #f4a261; /* warm orange */
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    label {
+        font-weight: 600;
+        color: #264653;
+    }
+
+    input.form-control {
+        border-radius: 8px;
+        border: 1.5px solid #ccc;
+        transition: border-color 0.3s ease;
+    }
+    input.form-control:focus {
+        border-color: #f4a261;
+        box-shadow: 0 0 8px rgba(244,162,97,0.4);
+        outline: none;
+    }
+
+    .btn-warning {
+        background-color: #f4a261;
+        border-color: #f4a261;
+        color: #fff;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-warning:hover {
+        background-color: #e07b39;
+        border-color: #e07b39;
+        color: #fff;
+    }
+
+    .btn-secondary {
+        border-radius: 8px;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .validation-summary-errors {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="edit-container">
+    <h1>Edit Lorry</h1>
+
+    <form asp-action="Edit" method="post" novalidate>
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger validation-summary-errors" role="alert"></div>
+        <input type="hidden" asp-for="LorryId" />
+
+        <div class="mb-4">
+            <label asp-for="NumberPlate"></label>
+            <input asp-for="NumberPlate" class="form-control" />
+            <span asp-validation-for="NumberPlate" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Model"></label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger small"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-warning">Save Changes</button>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

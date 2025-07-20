@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<EShift.Models.Driver>
+@{
+    ViewData["Title"] = "Drivers";
+}
+
+<style>
+    /* Custom hover effect for table rows */
+    .table-hover tbody tr:hover {
+        background-color: #e9f5ff;
+    }
+    /* Buttons spacing */
+    .action-btns a {
+        margin-right: 0.5rem;
+    }
+
+</style>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4 text-primary">Drivers</h1>
+
+    <div class="text-center mb-4">
+        <a asp-action="Create" class="btn btn-success rounded-pill px-4 shadow-sm">
+            <i class="bi bi-person-plus me-2"></i> Create New Driver
+        </a>
+    </div>
+
+    <div class="table-responsive rounded-3 shadow-sm border">
+        <table class="table table-striped table-hover mb-0 align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th class="py-3 px-3">@Html.DisplayNameFor(model => model.Name)</th>
+                    <th class="py-3 px-3">@Html.DisplayNameFor(model => model.Phone)</th>
+                    <th class="py-3 px-3">@Html.DisplayNameFor(model => model.LicenseNumber)</th>
+                    <th class="py-3 px-3 text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.LicenseNumber)</td>
+                        <td class="py-3 px-3 text-center action-btns">
+                            <a asp-action="Edit" asp-route-id="@item.DriverId" class="btn btn-sm btn-primary rounded-pill px-3 shadow-sm" title="Edit">
+                                <i class="bi bi-pencil-square">Edit</i>
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.DriverId" class="btn btn-sm btn-info rounded-pill px-3 shadow-sm" title="Details">
+                                <i class="bi bi-info-circle">Details</i>
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.DriverId" class="btn btn-sm btn-danger rounded-pill px-3 shadow-sm" title="Delete">
+                                <i class="bi bi-trash">Delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
